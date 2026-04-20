@@ -1,0 +1,134 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: white;
+}
+
+.chat-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header button {
+  padding: 8px 15px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-header button:hover {
+  background: #764ba2;
+}
+
+.chat-header h2 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.messages-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f9f9f9;
+}
+
+.message {
+  max-width: 70%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background: #667eea;
+  color: white;
+}
+
+.message.received {
+  align-self: flex-start;
+  background: #e8e8e8;
+  color: #333;
+}
+
+.message strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  opacity: 0.8;
+}
+
+.message p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.message .time {
+  display: block;
+  font-size: 11px;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+
+.message-form {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  background: white;
+  border-top: 1px solid #ddd;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.message-form input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.message-form button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.message-form button:hover {
+  background: #764ba2;
+}
+
+.chat-container .error {
+  color: #e74c3c;
+  padding: 10px 20px;
+  background: #fadbd8;
+  border-left: 4px solid #e74c3c;
+}
+
+.chat-container .empty {
+  color: #999;
+  text-align: center;
+  padding: 40px 20px;
+  font-style: italic;
+}
